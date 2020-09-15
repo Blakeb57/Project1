@@ -28,6 +28,14 @@ void Household::set_income(int inc)
     this->income = inc;
 }
 
+std::string  Household::get_head() const { 
+    return house_head;
+}
+
+std::string Household::get_address() const {
+    return address; 
+}
+
 int Household::get_occupants()const
 {
     return occupants;
@@ -60,3 +68,12 @@ void Household::output(ostream& outs)const
     outs << get_income() << endl;
 }
 
+std::istream& Household::operator >> (std::istream& ins, Household& h)
+{
+
+}
+
+std::ostream& Household::operator << (std::ostream& outs, const Household& h)
+{
+    
+}

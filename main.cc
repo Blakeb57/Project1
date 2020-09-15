@@ -19,9 +19,9 @@ int menu();
 int main()
 {
     Household tmp;
-    Ward neighborhood;
-    int choice;
-    string name;
+   	Ward neighborhood;
+    //int choice;
+    //string name;
     ofstream outs;
     ifstream ins;
     ins.open("households.txt");
@@ -35,6 +35,9 @@ int main()
 		ins.close();
     }
 
+	neighborhood.display(cout);
+
+/*
     do
 	{
 		choice = menu();
@@ -103,7 +106,9 @@ int main()
 		}
 		outs.close();
 return 0;
+*/
 } // bottom of the main
+
 
 int menu()
 {

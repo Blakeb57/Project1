@@ -11,7 +11,13 @@ Ward::Ward()
 void Ward::load(std::istream& ins)
 {
 	string line;
-    getline(ins, line);
+    Household tmp;
+    while(!ins.eof()){
+        tmp.input(ins);
+        Houses[used] = tmp;
+        used++;
+    }
+
 }
 
 void Ward::add(Household& NewHousehold)
@@ -30,100 +36,49 @@ void Ward::display(std::ostream& outs)
 {
 	for(int i = 0; i < used; ++i)
 	{
-		outs << Houses[i] << endl;
+		outs << Houses[i].get_head() << endl;
+        outs << Houses[i].get_address() << endl;
+		outs << Houses[i].get_income() << endl;
+		outs << Houses[i].get_occupants() << endl << endl;
+
 	}
 }
 
 void Ward::remove(const std::string& name)
 {
-    
+    return;
 }
 
 Household find(const std::string& name)
 {
-
+    Household h1;
+    return h1;
 }
 
 void Ward::display_richest()  //has to go through array houses and display to terminal the richest household/individual
 {
-    if()
-    for(size_t i = 0; i < used; ++i)
-    {
-		cout << Houses[i] << endl;
-    }
+    return;
 }
 
 void Ward::display_avg_income()
 {
-	if(used == 0){
-
-	    cout<<"Empty list.\n";
-
-    }else{
-
-	    for(size_t i = 0; i<used; ++i){
-		    cout<<data[i]<<endl;
-        }
-    }
+    return;
 }
 void Ward::display_avg_people()
 {
-	if(used == 0){
-
-	    cout<<"Empty list.\n";
-
-    }else{
-
-	    for(size_t i = 0; i<used; ++i){
-		    cout<<data[i]<<endl;
-        }
-    }
+    return;
 }
 void Ward::sort_by_income()
 {
-    bool done = false;
-    int j;
-    int tmp;
-    while(!done)
-	{
-		done = true;
-
-		for(j = used -1; j > 0; --j)
-		{
-	    	if(data[j] < data[j-1])
-			{
-				done = false;
-				tmp = data[j];
-				data[j] = data[j-1];
-				data[j-1] = tmp;
-	   		}
-		}
-    }
+    return;
 }
 
 void Ward::sort_by_name()
 { 
-    bool done = false;
-    int j;
-    int tmp;
-    while(!done)
-	{
-		done = true;
-
-		for(j = used -1; j > 0; --j)
-		{
-	    	if(data[j] < data[j-1])
-			{
-				done = false;
-				tmp = data[j];
-				data[j] = data[j-1];
-				data[j-1] = tmp;
-	   		}
-		}  
-    }
+    return;
 }
 
 void Ward::save(std::ostream& outs)
 {
-
+    return;
 }
