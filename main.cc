@@ -28,7 +28,7 @@ int main()
 
     // if the file is not there we will assume that this is the first 
     // time the program has been run on this machine
-
+	
     if(!ins.fail())
 	{
 		neighborhood.load(ins);
@@ -42,7 +42,7 @@ int main()
 		switch(choice)
 		{
 	    	case 1: 
-				cin>>tmp;
+				cin >> tmp;
 				neighborhood.add(tmp);	
 				break;
 	    	case 2:

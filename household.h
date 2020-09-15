@@ -6,9 +6,9 @@
       of those attributes either by the application programmer or by the 
       user through the input functions. 
   **********************************************************/
-#include<iostream>
-#include<string>
-#include<fstream>
+#include <iostream>
+#include <string>
+#include <fstream>
 #ifndef HOUSEHOLD_H
 #define HOUSEHOLD_H
   
@@ -34,6 +34,7 @@ class Household
 		void input(std::istream& ins);
 		void output(std::ostream& outs)const;
 
+		
 	private:
 
 	  std::string house_head;
