@@ -20,8 +20,8 @@ int main()
 {
     Household tmp;
    	Ward neighborhood;
-    //int choice;
-    //string name;
+    int choice;
+    string name;
     ofstream outs;
     ifstream ins;
     ins.open("households.txt");
@@ -34,10 +34,7 @@ int main()
 		neighborhood.load(ins);
 		ins.close();
     }
-
-	neighborhood.display(cout);
-
-/*
+	
     do
 	{
 		choice = menu();
@@ -70,7 +67,6 @@ int main()
 
 				getline(cin,name);
 				tmp = neighborhood.find(name);
-				cout << tmp;
 				break;
 	    	case 5:
 				neighborhood.display_richest();
@@ -83,9 +79,11 @@ int main()
 				break;
 	    	case 8:
 				neighborhood.sort_by_income();
+					neighborhood.display(cout);
 				break;
 	    	case 9:
 				neighborhood.sort_by_name();
+					neighborhood.display(cout);
 				break;
 	    	case 0:
 				cout << "Good-bye. " << endl;
@@ -106,7 +104,7 @@ int main()
 		}
 		outs.close();
 return 0;
-*/
+
 } // bottom of the main
 
 

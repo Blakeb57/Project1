@@ -9,6 +9,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+using namespace std;
 #ifndef HOUSEHOLD_H
 #define HOUSEHOLD_H
   
@@ -45,7 +46,7 @@ class Household
 };
 
   //overloaded i/o operators
-  std::istream& operator >>(std::istream& ins, Household& h);
-  std::ostream& operator <<(std::ostream& outs, const Household& h);
+std::istream& operator >>(std::istream& ins, Household& h);
+std::ostream& operator << (std::ostream& outs, const Household& h);
 
 #endif
